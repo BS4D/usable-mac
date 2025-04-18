@@ -48,6 +48,11 @@ cmd + shift - pagedown [
   "firefox" : skhd -k 'ctrl + shift - pagedown'
   *       ~
 ]
+# vertical tabs
+cmd + alt - z [
+  "firefox" : skhd -k 'ctrl - z'
+  *       ~
+]
 
 # text navigation and manipulation
 cmd - left : skhd -k 'alt - left'
