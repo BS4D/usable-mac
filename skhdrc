@@ -1,35 +1,7 @@
-# ctrl -> cmd
-# windows -> ctrl
-# alt -> alt
-
-# window navigation
-# switching focus
-ctrl - left  : yabai -m window --focus west || yabai -m display --focus prev
-ctrl - right : yabai -m window --focus east || yabai -m display --focus next
-ctrl - up    : yabai -m window --focus north
-ctrl - down  : yabai -m window --focus south
-# resizing windows
-ctrl + cmd - left  : yabai -m window --resize left:-10:0
-ctrl + cmd - right : yabai -m window --resize right:10:0
-ctrl + cmd - up    : yabai -m window --resize top:0:-10
-ctrl + cmd - down  : yabai -m window --resize bottom:0:10
-# switching windows
-ctrl + shift - left  : yabai -m window --swap west || (yabai -m window --display prev && yabai -m display --focus prev)
-ctrl + shift - right : yabai -m window --swap east || (yabai -m window --display next && yabai -m display --focus next)
-ctrl + shift - up    : yabai -m window --swap north
-ctrl + shift - down  : yabai -m window --swap south
-
-# window state management
 ctrl - q [
   "firefox" : skhd -k 'cmd - q' # exit firefox completely to prevent issues with re-opening tabs
-  * : yabai -m window --close
+  *       ~
 ]
-ctrl - w : yabai -m window --toggle zoom-fullscreen
-ctrl - e : yabai -m window --toggle float
-ctrl - f : yabai -m window --toggle native-fullscreen
-
-# terminal
-ctrl - return : kitty --single-instance --working-directory ~
 
 # firefox tab navigation and manipulation
 cmd - pageup [
@@ -60,6 +32,3 @@ cmd - right : skhd -k 'alt - right'
 cmd + shift - left : skhd -k 'alt + shift - left'
 cmd + shift - right : skhd -k 'alt + shift - right'
 cmd - backspace : skhd -k 'alt - backspace'
-
-# screenshot
-ctrl + shift - s : skhd -k 'ctrl + shift + cmd - 4'

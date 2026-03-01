@@ -1,0 +1,70 @@
+config-version = 2
+
+start-at-login = true
+after-startup-command = []
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 40
+
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+automatically-unhide-macos-hidden-apps = true
+
+persistent-workspaces = ["1", "2", "3", "4"]
+
+[key-mapping]
+  preset = 'qwerty'
+
+[gaps]
+  inner.horizontal  = 8
+  inner.vertical    = 8
+  outer.left        = 8
+  outer.bottom      = 8
+  outer.top         = 8
+  outer.right       = 8
+
+[mode.main.binding]
+  ctrl-left  = 'focus --boundaries all-monitors-outer-frame left'
+  ctrl-down  = 'focus --boundaries all-monitors-outer-frame down'
+  ctrl-up    = 'focus --boundaries all-monitors-outer-frame up'
+  ctrl-right = 'focus --boundaries all-monitors-outer-frame right'
+
+  ctrl-shift-left  = 'move --boundaries all-monitors-outer-frame left'
+  ctrl-shift-down  = 'move --boundaries all-monitors-outer-frame down'
+  ctrl-shift-up    = 'move --boundaries all-monitors-outer-frame up'
+  ctrl-shift-right = 'move --boundaries all-monitors-outer-frame right'
+
+  cmd-ctrl-shift-left  = 'join-with left'
+  cmd-ctrl-shift-down  = 'join-with down'
+  cmd-ctrl-shift-up    = 'join-with up'
+  cmd-ctrl-shift-right = 'join-with right'
+
+  cmd-ctrl-left  = 'resize width -40'
+  cmd-ctrl-down  = 'resize height -40'
+  cmd-ctrl-up    = 'resize height +40'
+  cmd-ctrl-right = 'resize width +40'
+
+  ctrl-1 = 'workspace 1'
+  ctrl-2 = 'workspace 2'
+  ctrl-3 = 'workspace 3'
+  ctrl-4 = 'workspace 4'
+  ctrl-tab = 'workspace-back-and-forth'
+
+  ctrl-shift-1 = 'move-node-to-workspace 1'
+  ctrl-shift-2 = 'move-node-to-workspace 2'
+  ctrl-shift-3 = 'move-node-to-workspace 3'
+  ctrl-shift-4 = 'move-node-to-workspace 4'
+
+  ctrl-q = 'close'
+  ctrl-w = 'layout tiles accordion'
+  ctrl-e = 'macos-native-minimize'
+  ctrl-f = 'macos-native-fullscreen'
+
+  ctrl-r = 'reload-config'
+
+  ctrl-enter    = 'exec-and-forget /Applications/kitty.app/Contents/MacOS/kitty --single-instance --working-directory ~'
+  ctrl-s        = 'exec-and-forget open -a finder'
+  ctrl-shift-s  = 'exec-and-forget open -a screenshot'
