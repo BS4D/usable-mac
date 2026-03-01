@@ -1,28 +1,18 @@
-ctrl - q [
-  "firefox" : skhd -k 'cmd - q' # exit firefox completely to prevent issues with re-opening tabs
-  *       ~
-]
-
-# firefox tab navigation and manipulation
+# zen tab navigation and manipulation
 cmd - pageup [
-  "firefox" : skhd -k 'ctrl - pageup'
+  "zen" : skhd -k 'ctrl - pageup'
   *       ~
 ]
 cmd - pagedown [
-  "firefox" : skhd -k 'ctrl - pagedown'
+  "zen" : skhd -k 'ctrl - pagedown'
   *       ~
 ]
 cmd + shift - pageup [
-  "firefox" : skhd -k 'ctrl + shift - pageup'
+  "zen" : skhd -k 'ctrl + shift - pageup'
   *       ~
 ]
 cmd + shift - pagedown [
-  "firefox" : skhd -k 'ctrl + shift - pagedown'
-  *       ~
-]
-# vertical tabs
-cmd + alt - z [
-  "firefox" : skhd -k 'ctrl - z'
+  "zen" : skhd -k 'ctrl + shift - pagedown'
   *       ~
 ]
 
