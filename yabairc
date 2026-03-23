@@ -1,22 +1,20 @@
 # window gaps
+
+padding=8
+
 yabai -m config \
-  window_gap 10 \
-  top_padding 10 \
-  bottom_padding 10 \
-  left_padding 10 \
-  right_padding 10
+  window_gap "$padding" \
+  top_padding "$padding" \
+  bottom_padding "$padding" \
+  left_padding "$padding" \
+  right_padding "$padding"
 
 yabai -m config \
   layout bsp \
-  split_ratio 0.6 \
-  split_type auto \
-  auto_balance off \
+  auto_balance on \
   window_origin_display focused
 
-yabai -m config \
-  mouse_modifier ctrl \
-  mouse_action1 move \
-  mouse_action2 resize
+yabai -m config mouse_modifier ctrl
 
 # retain focus when spawning a new kitty window on a different display
 yabai -m signal --add event=window_created app="^kitty$" action="yabai -m window \$YABAI_WINDOW_ID --focus"
